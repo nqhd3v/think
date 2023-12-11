@@ -1,0 +1,30 @@
+.hashtag.hashtag__block {
+  @apply px-2 py-0.5 rounded bg-light-400 dark:bg-dark-600;
+}
+
+.description {
+  @apply font-patrick text-xl md:text-2xl;
+}
+
+.link {
+  @apply text-dark-500 dark:text-light-400 font-bold;
+  background-image: linear-gradient(
+    0deg,
+    var(--colors-light-500),
+    var(--colors-light-500)
+  );
+  @apply bg-no-repeat bg-right-bottom bg-[length:0_8px];
+  transition: background-size 350ms;
+}
+.dark .link {
+  background-image: linear-gradient(
+    0deg,
+    var(--colors-light-940),
+    var(--colors-light-940)
+  );
+  transition: background-size 350ms;
+}
+.link:where(:hover, :focus-visible) {
+  background-size: 100% 8px;
+  background-position-x: left;
+}

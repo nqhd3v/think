@@ -1,0 +1,42 @@
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translate(0%, -50%) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translate(50%, -50%) scale(1);
+  }
+  26% {
+    opacity: 0;
+    transform: translate(50%, -50%) scale(0.6);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(0%, -50%) scale(1);
+  }
+}
+
+.arrow-animate {
+  @apply relative w-10 h-10;
+}
+.arrow-animate .arrow-animate--wrapper {
+  @apply absolute w-full h-full;
+}
+.arrow-animate--wrapper--item {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+.arrow-animate--wrapper--item:last-child {
+  @apply ml-2;
+}
+
+.arrow-animate.arrow-animate__active .arrow-animate--wrapper--item {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.arrow-animate.arrow-animate__active .arrow-animate--wrapper--item:first-child {
+  animation-delay: 0.2s;
+}

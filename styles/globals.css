@@ -1,0 +1,109 @@
+@import url("./content.css");
+@import url("./card.css");
+@import url("./text.css");
+@import url("./avatar.css");
+@import url("./animate.css");
+@import url("./button.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --colors-light-100: #f4f6f9;
+  --colors-light-200: #d6deea;
+  --colors-light-300: #b6c9e1;
+  --colors-light-400: #95b4dd;
+  --colors-light-500: #71a1e0;
+  --colors-light-600: #478eeb;
+  --colors-light-700: #177bff;
+  --colors-light-800: #196fe1;
+  --colors-light-900: #2967b9;
+  --colors-light-910: #315e99;
+  --colors-light-920: #365681;
+  --colors-light-930: #374e6d;
+  --colors-light-940: #37475d;
+  --colors-dark-100: #435873;
+  --colors-dark-200: #38506e;
+  --colors-dark-300: #2d486a;
+  --colors-dark-400: #214068;
+  --colors-dark-500: #163966;
+  --colors-dark-600: #0b3366;
+  --colors-dark-700: #002d67;
+  --colors-dark-800: #092a53;
+  --colors-dark-900: #0f2644;
+  --colors-dark-910: #122339;
+  --colors-dark-920: #142030;
+  --colors-dark-930: #141d28;
+  --colors-dark-940: #141a23;
+}
+/* @layer base {
+  :root {
+    --colors-light-100: ;
+    --colors-light-200: 214 222 234;
+    --colors-light-300: 182 201 225;
+    --colors-light-400: 149 180 221;
+    --colors-light-500: 113 161 224;
+    --colors-light-600: 71 142 235;
+    --colors-light-700: 23 123 255;
+    --colors-light-800: 25 111 225;
+    --colors-light-900: 41 103 185;
+    --colors-light-910: 49 94 153;
+    --colors-light-920: 54 86 129;
+    --colors-light-930: 55 78 109;
+    --colors-light-940: 55 71 93;
+    --colors-dark-100: 67 88 115;
+    --colors-dark-200: 56 80 110;
+    --colors-dark-300: 45 72 106;
+    --colors-dark-400: 33 64 104;
+    --colors-dark-500: 22 57 102;
+    --colors-dark-600: 11 51 102;
+    --colors-dark-700: 0 45 103;
+    --colors-dark-800: 9 42 83;
+    --colors-dark-900: 15 38 68;
+    --colors-dark-910: 18 35 57;
+    --colors-dark-920: 20 32 48;
+    --colors-dark-930: 20 29 40;
+    --colors-dark-940: 20 26 35;
+  }
+} */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../public/fonts/Nunito.ttf");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../public/fonts/Lobster.ttf");
+}
+@font-face {
+  font-family: "PatrickHand";
+  src: url("../public/fonts/PatrickHand.ttf");
+}
+@font-face {
+  font-family: "WriterMonoS";
+  src: url("../public/fonts/iAWriterMonoS.ttf");
+}
+
+html,
+body {
+  @apply bg-light-300 dark:bg-dark-900 text-dark-400 dark:text-light-100 font-nunito overflow-x-hidden;
+}
+
+.think-page--content {
+  @apply min-h-screen
+    w-[calc(100%-24px)] sm:w-[calc(100%-40px)] md:w-[720px] lg:w-[960px]
+    m-auto
+    p-2 sm:p-4 md:p-6;
+}
+.think-page--content.think-page--content__top {
+  @apply pt-10 sm:pt-16 md:pt-16;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-lobster;
+}

@@ -1,0 +1,24 @@
+.think--paragraph {
+  @apply text-lg font-writer;
+}
+
+.think--paragraph h1,
+h1.think--title {
+  @apply text-4xl md:text-5xl;
+}
+.think--paragraph h2,
+h2.think--title {
+  @apply text-3xl md:text-4xl;
+}
+.think--paragraph h3,
+h3.think--title {
+  @apply text-2xl md:text-3xl;
+}
+.think--paragraph h4,
+h4.think--title {
+  @apply text-xl sm:text-2xl;
+}
+.think--paragraph h5,
+h5.think--title {
+  @apply text-lg sm:text-xl;
+}
