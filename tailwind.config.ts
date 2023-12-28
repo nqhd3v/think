@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -39,12 +40,30 @@ const config: Config = {
           930: "#141D28",
           940: "#141A23",
         },
+        love: {
+          100: "#FAF3F3",
+          200: "#F0D1D1",
+          300: "#EDABAB",
+          400: "#F18282",
+          500: "#FF5252",
+          600: "#EA4545",
+          700: "#D43D3D",
+          800: "#BA3C3C",
+          900: "#9C4141",
+          910: "#844343",
+          920: "#714242",
+        },
       },
       fontFamily: {
         lobster: ["Lobster", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
         patrick: ["PatrickHand", "sans-serif"],
         writer: ["WriterMonoS", "sans-serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
       },
     },
   },

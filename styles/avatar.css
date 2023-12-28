@@ -1,25 +1,32 @@
 .avatar {
   @apply relative w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12
-    p-0.5 sm:p-1 md:p-2 lg:p-4;
+    p-0.5 sm:p-1 md:p-2;
 }
 .avatar::after {
   @apply content-[''] absolute z-0
-    w-full h-full md:w-[calc(100%-12px)] md:h-[calc(100%-12px)]
+    w-full h-full md:w-[calc(100%-4px)] md:h-[calc(100%-4px)]
     bg-dark-500 dark:bg-dark-100
     top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full;
 }
 .avatar.avatar__wrapper::before {
-  @apply content-[''] w-[calc(100%+60px)] h-[calc(100%+60px)] absolute
-    bg-dark-100/10 dark:bg-light-100/10 duration-700
-    top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none;
-}
-.avatar:hover::before {
-  @apply w-[calc(100%+660px)] h-[calc(100%+660px)] opacity-0;
-}
+  @apply content-[''] w-[calc(100%+100px)] h-[calc(100%+100px)] absolute border-4 border-dashed
+    border-dark-100/10 dark:border-light-100/10 duration-700
+    top-1/2 left-1/2 rounded-full pointer-events-none;
 
+  animation: avatar-wrapper-spin 120s linear infinite;
+}
 .avatar--image {
   @apply relative w-full h-full overflow-hidden z-[2];
 }
 .avatar .avatar--image img {
   @apply absolute !top-1/2 !left-1/2 -translate-x-1/2 -translate-y-1/2 w-full !h-auto pointer-events-none;
+}
+
+@keyframes avatar-wrapper-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

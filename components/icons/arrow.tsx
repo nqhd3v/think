@@ -51,7 +51,6 @@ const InternalArrowRightAnimate: React.FC<IAnimateIconProps> = ({
   side = "right",
 }) => {
   const rotateDeg = useMemo(() => getDegreeBySide(side), [side]);
-  console.log(side, rotateDeg);
 
   return (
     <div

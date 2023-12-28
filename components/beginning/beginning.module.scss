@@ -1,0 +1,92 @@
+.beginning {
+  @apply fixed top-0 left-0 right-0 h-screen w-full flex items-center justify-center z-[999];
+  background: #232323;
+
+  :global {
+    .beginning--box {
+      width: 250px;
+      height: 250px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .beginning--box--title {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        .beginning--box--title--block {
+          width: 0%;
+          height: inherit;
+          background: #ffb510;
+          position: absolute;
+          animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+          display: flex;
+        }
+
+        h1 {
+          @apply font-poppins text-white flex items-baseline opacity-0 relative;
+          -webkit-animation: mainFadeIn 2s forwards;
+          -o-animation: mainFadeIn 2s forwards;
+          animation: mainFadeIn 2s forwards;
+          font-weight: 800;
+          animation-delay: 1.6s;
+          font-size: 32px;
+
+          span {
+            width: 0px;
+            height: 0px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+
+            background: #ffb510;
+            -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92)
+              forwards;
+            animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation-delay: 2s;
+            margin-left: 5px;
+            margin-top: -10px;
+            position: absolute;
+            bottom: 13px;
+            right: -12px;
+          }
+        }
+      }
+
+      .beginning--box--role {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-top: -10px;
+
+        .beginning--box--role--block {
+          width: 0%;
+          height: inherit;
+          background: #e91e63;
+          position: absolute;
+          animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+          animation-delay: 2s;
+          display: flex;
+        }
+
+        p {
+          @apply font-writer;
+          animation: secFadeIn 2s forwards;
+          animation-delay: 3.2s;
+          opacity: 0;
+
+          color: #ffffff;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }
+}

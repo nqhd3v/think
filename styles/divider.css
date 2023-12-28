@@ -1,0 +1,3 @@
+.divider {
+  @apply w-full h-24 relative flex items-center justify-center;
+}

@@ -16,7 +16,7 @@ const InternalHashtag: React.FC<ITextHashtagProps> = ({
         onClick?.();
       }}
     >
-      {prefix && <span className="hashtag--prefix">{prefix}&nbsp;&nbsp;</span>}
+      {prefix && <span className="hashtag--prefix">{prefix}&nbsp;</span>}
       <span className="hashtag--content">{content}</span>
     </span>
   );

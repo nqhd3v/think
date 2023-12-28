@@ -15,3 +15,7 @@ export interface ITextLinkProps extends ITextProps {
   href: string;
   newTab?: boolean;
 }
+
+export interface ITextTypingProps extends Omit<ITextProps, "content"> {
+  content: string[];
+}
