@@ -1,0 +1,47 @@
+{
+  "name": "think",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8000",
+    "build": "next build",
+    "start": "next start -p 8000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "ahooks": "^3.7.9",
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10",
+    "draft-js": "^0.11.7",
+    "firebase": "^10.8.0",
+    "firebase-admin": "^12.0.0",
+    "formidable": "^3.5.1",
+    "garmin-connect": "^1.6.2",
+    "joi": "^17.12.1",
+    "lodash": "^4.17.21",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-draft-wysiwyg": "^1.15.0",
+    "recharts": "^2.11.0",
+    "tailwind-merge": "^2.2.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/draft-js": "^0.11.17",
+    "@types/formidable": "^3.4.5",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-draft-wysiwyg": "^1.13.8",
+    "@types/uuid": "^9.0.8",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "cSpell.words": ["Coef", "concurent", "firestore", "timestamptz"],
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#7597fd",
+    "activityBar.activeBackground": "#7597fd",
+    "activityBar.foreground": "#ffffff",
+    "activityBar.inactiveForeground": "#fae4f6",
+    "activityBar.activeBorder": "#ffffff",
+    "activityBarBadge.background": "#fae4f6",
+    "activityBarBadge.foreground": "#7597fd",
+    "titleBar.activeBackground": "#7597fd",
+    "titleBar.inactiveBackground": "#7597fd",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#7597fd",
+    "statusBarItem.hoverBackground": "#626262",
+    "statusBar.foreground": "#ffffff"
+  },
+  "workbench.preferredLightColorTheme": "Default Dark+"
+}

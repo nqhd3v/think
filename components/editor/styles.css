@@ -1,0 +1,6 @@
+.editor--wrapper .editor--toolbar {
+  @apply h-[132px] sm:max-md:h-[96px] md:h-[72px];
+}
+.editor--wrapper .editor--content {
+  @apply h-[calc(100vh-140px)] sm:max-md:h-[calc(100vh-104px)] md:h-[calc(100vh-80px)];
+}
