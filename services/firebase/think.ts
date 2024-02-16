@@ -104,11 +104,13 @@ export const verifyConfByField = async (
   field: keyof TThinkConfig
 ): Promise<boolean> => {
   const conf = await getThinkConfig();
-  if (!conf) {
+  if (!conf || !conf[field]) {
     console.error("no conf found");
     return false;
   }
-  return conf[field] === inp;
+  return Array.isArray(conf[field])
+    ? conf[field].includes(inp)
+    : conf[field] === inp;
 };
 
 export const getThinkImage = async (filename: string) => {

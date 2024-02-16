@@ -9,7 +9,7 @@ export async function GET(req: Request) {
   if (!createPassCode || !filename) {
     return Response.json({}, { status: 403 });
   }
-  const isValid = await verifyConfByField(createPassCode, "createPassCode");
+  const isValid = await verifyConfByField(createPassCode, "pass__createThink");
   if (!isValid) {
     return Response.json({}, { status: 403 });
   }

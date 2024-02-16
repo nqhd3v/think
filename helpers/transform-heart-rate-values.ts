@@ -11,7 +11,6 @@ export const transformHeartRateValues = (
 ) => {
   const lastSyncDate = dayjs.utc(lastSync).tz("Asia/Ho_Chi_Minh");
   const lastSyncUnix = lastSyncDate.unix() * 1000;
-  console.log(lastSyncUnix);
   const clone: { heartrate: number | null; timestamp: number }[] = [
     ...heartRateValues,
   ];
@@ -26,6 +25,5 @@ export const transformHeartRateValues = (
   }
 
   const res = clone.sort(({ timestamp: t1 }, { timestamp: t2 }) => t1 - t2);
-  console.log(res);
   return res;
 };

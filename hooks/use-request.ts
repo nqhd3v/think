@@ -1,34 +1,7 @@
+import { TErrorHandlerResponse, errorHandler } from "@/helpers/error-handler";
 import { useRequest } from "ahooks";
 import { Service } from "ahooks/lib/useRequest/src/types";
 import { AxiosError, AxiosResponse } from "axios";
-
-type TErrorHandlerResponse = {
-  root: string;
-  error?: string[] | string;
-};
-const errorHandler = (error: AxiosError): TErrorHandlerResponse => {
-  if (error.response) {
-    if (error.response.status >= 500) {
-      return {
-        root: "exception.request.client",
-        error: "exception.server.unknown",
-      };
-    }
-    return {
-      root: "exception.request.client",
-      error: (error.response.data as any)?.error,
-    };
-  }
-  if (error.request) {
-    return {
-      root: "exception.request.network",
-    };
-  }
-  console.log(error);
-  return {
-    root: "exception.request.unknown",
-  };
-};
 
 export const useRequestData = <T>(
   service: Service<AxiosResponse<T, any>, any>,

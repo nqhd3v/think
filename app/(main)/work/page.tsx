@@ -22,7 +22,7 @@ export default function WorkPage() {
         setData({ cmd: "think", payload: { data, category: "work" } });
       },
       onError({ error, root }) {
-        console.log({ error, root });
+        console.error({ error, root });
       },
     }
   );

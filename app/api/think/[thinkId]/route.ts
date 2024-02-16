@@ -33,7 +33,7 @@ export async function GET(
   }
 
   const data = await getThinkById(thinkId);
-  if (!data)
+  if (thinkId === "c0nf1g" || !data)
     return Response.json({
       id: "fake@" + v4(),
       title: "nothing to think",
@@ -53,7 +53,7 @@ export async function GET(
   }
   const isValid = await verifyConfByField(
     passCode as string,
-    "privateThinkPassCode"
+    "pass__readPrivateThink"
   );
   if (!isValid) {
     return Response.json(

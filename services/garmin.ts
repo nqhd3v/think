@@ -104,7 +104,6 @@ export const getGarminDailyData = async (
 }> => {
   const today =
     date || dayjs.tz(dayjs(), "Asia/Ho_Chi_Minh").format("YYYY-MM-DD");
-  console.log({ date, today });
   const client = await initialGarminClient();
   const req = garminUserData(client);
 

@@ -36,6 +36,7 @@ export type TSetThinkDataParams = {
 };
 
 export type TThinkConfig = {
-  createPassCode: string;
-  privateThinkPassCode: string;
+  pass__createThink: string;
+  pass__readPrivateThink: string;
+  pass__accessPrivateMode: string;
 };

@@ -11,6 +11,6 @@ export async function GET(req: Request) {
     return Response.json({ errors: ["Unknown Source App"] });
   const { date, user, data } = await getGarminDailyData(dateInput);
   const isSaved = await saveDailyData(date, data);
-  console.log("--saved", isSaved);
+
   return Response.json({ date, data, user, isSaved });
 }

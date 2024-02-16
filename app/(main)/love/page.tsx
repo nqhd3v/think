@@ -1,5 +1,6 @@
 "use client";
 import PageContent from "@/components/page-content";
+import PassCode from "@/components/pass-code";
 import ThinkCard from "@/components/think";
 import { useThink } from "@/context/think";
 import { useRequestData } from "@/hooks/use-request";
@@ -19,7 +20,7 @@ export default function LovePage() {
         setData({ cmd: "think", payload: { data, category: "love" } });
       },
       onError({ error, root }) {
-        console.log({ error, root });
+        console.error({ error, root });
       },
     }
   );
@@ -37,6 +38,8 @@ export default function LovePage() {
               caption to be updated when I fall in love :) but not now :&gt;
             </p>
           </div>
+
+          <ThinkCard.PrivateVerify />
           {loading ? (
             <>
               <ThinkCard.PreviewLoading />

@@ -19,7 +19,7 @@ export default function HomePage() {
         setData({ cmd: "think", payload: { data } });
       },
       onError({ error, root }) {
-        console.log({ error, root });
+        console.error({ error, root });
       },
     }
   );

@@ -20,7 +20,7 @@ export default function RunPage() {
         setData({ cmd: "think", payload: { data, category: "health" } });
       },
       onError({ error, root }) {
-        console.log({ error, root });
+        console.error({ error, root });
       },
     }
   );
